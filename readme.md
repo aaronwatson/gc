@@ -1,8 +1,22 @@
 # General Conference of The Church of Jesus Christ of Latter-day Saints
-## App downloads mp3 audio files of all talks from the most recent conference
+## App downloads mp3 audio files of all talks from the specified conference
+### Each MP3 file will include
+- Title
+- Speaker
+- Image of speaker
+- Text of talk set as embedded lyrics
 
-**To build the app:**
-`docker build -f dockerfile . -t gc`
+## Build the app
+```
+dotnet build
+```
 
-**To run the app:**
-`docker run gc -d /opt/selenium/ -o /tmp`
+## Run the app
+```
+dotnet run -y [year of conference] -m [month (usually 04 or 10)] -o [folder to save mp3 talks]
+```
+
+e.g.
+```
+dotnet run -y 2024 -m 04 -o 2024-april-conference
+```

@@ -9,25 +9,15 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/bin/Debug/netcoreapp2.1/GCDownload.dll",
+            "program": "${workspaceFolder}/bin/Debug/net6.0/GCDownload.dll",
             "args": [
-                "-d ${workspaceFolder}/bin/Debug/netcoreapp2.1/",
-                "-o ./tmp"
+                "-o output",
+                "-y 2023",
+                "-m 10"
             ],
             "cwd": "${workspaceFolder}",
             "console": "internalConsole",
             "stopAtEntry": false
-        },
-        {
-            "name": ".NET Core Attach",
-            "type": "coreclr",
-            "request": "attach",
-            "processId": "${command:pickProcess}"
-        },
-        {
-            "name": "Local Process with Kubernetes",
-            "type": "local-process-with-kubernetes.configuration",
-            "request": "launch"
         }
     ]
 }
